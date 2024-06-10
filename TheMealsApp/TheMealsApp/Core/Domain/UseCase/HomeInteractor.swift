@@ -6,10 +6,13 @@
 //
 
 import Foundation
+import RxSwift
 
 protocol HomeUseCase {
 
-  func getCategories(completion: @escaping (Result<[CategoryModel], Error>) -> Void)
+    //MARK: - Before using RXSwift
+//  func getCategories(completion: @escaping (Result<[CategoryModel], Error>) -> Void)
+    func getCategories() -> Observable<[CategoryModel]>
 
 }
 
@@ -21,12 +24,19 @@ class HomeInteractor: HomeUseCase {
     self.repository = repository
   }
 
-  func getCategories(
-    completion: @escaping (Result<[CategoryModel], Error>) -> Void
-  ) {
-    repository.getCategories { result in
-      completion(result)
+    
+    //MARK: - Before using RXSwift
+//  func getCategories(
+//    completion: @escaping (Result<[CategoryModel], Error>) -> Void
+//  ) {
+//    repository.getCategories { result in
+//      completion(result)
+//    }
+//  }
+    
+    func getCategories() -> RxSwift.Observable<[CategoryModel]> {
+        return repository.getCategories()
     }
-  }
+    
 
 }

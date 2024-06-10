@@ -23,7 +23,7 @@ struct HomeView: View {
           ForEach(
             self.presenter.categories,
             id: \.id
-          ) { category in
+          ) { category in 
             ZStack {
               self.presenter.linkBuilder(for: category) {
                 CategoryRow(category: category)

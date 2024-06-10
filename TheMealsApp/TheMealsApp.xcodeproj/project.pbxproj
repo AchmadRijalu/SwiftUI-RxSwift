@@ -34,6 +34,8 @@
 		2AC96399292CB25E0061B65A /* LocaleDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC96398292CB25E0061B65A /* LocaleDataSource.swift */; };
 		2AC9639B292CB2770061B65A /* CategoryEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AC9639A292CB2770061B65A /* CategoryEntity.swift */; };
 		2AC9639F292CB8270061B65A /* CachedAsyncImage in Frameworks */ = {isa = PBXBuildFile; productRef = 2AC9639E292CB8270061B65A /* CachedAsyncImage */; };
+		77227CEB2C02F80600CFA045 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 77227CEA2C02F80600CFA045 /* RxSwift */; };
+		77E34D192C00496D00C57C67 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 77E34D182C00496D00C57C67 /* RxCocoa */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,9 +70,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				77227CEB2C02F80600CFA045 /* RxSwift in Frameworks */,
 				2AC96396292CB18A0061B65A /* RealmSwift in Frameworks */,
 				2AC9639F292CB8270061B65A /* CachedAsyncImage in Frameworks */,
 				2AC96394292CB18A0061B65A /* Realm in Frameworks */,
+				77E34D192C00496D00C57C67 /* RxCocoa in Frameworks */,
 				2A9276B0292CAA7B00C30767 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +87,7 @@
 			children = (
 				2A9D452D292C805D008FABEB /* TheMealsApp */,
 				2A9D452C292C805D008FABEB /* Products */,
+				77227CE92C02F80600CFA045 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -316,6 +321,13 @@
 			path = Entity;
 			sourceTree = "<group>";
 		};
+		77227CE92C02F80600CFA045 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -337,6 +349,8 @@
 				2AC96393292CB18A0061B65A /* Realm */,
 				2AC96395292CB18A0061B65A /* RealmSwift */,
 				2AC9639E292CB8270061B65A /* CachedAsyncImage */,
+				77E34D182C00496D00C57C67 /* RxCocoa */,
+				77227CEA2C02F80600CFA045 /* RxSwift */,
 			);
 			productName = TheMealsApp;
 			productReference = 2A9D452B292C805D008FABEB /* TheMealsApp.app */;
@@ -370,6 +384,7 @@
 				2A9276AE292CAA7B00C30767 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				2AC96392292CB18A0061B65A /* XCRemoteSwiftPackageReference "realm-swift" */,
 				2AC9639D292CB8270061B65A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */,
+				77E34D132C0032CE00C57C67 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 2A9D452C292C805D008FABEB /* Products */;
 			projectDirPath = "";
@@ -644,6 +659,14 @@
 				minimumVersion = 2.0.0;
 			};
 		};
+		77E34D132C0032CE00C57C67 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -666,6 +689,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 2AC9639D292CB8270061B65A /* XCRemoteSwiftPackageReference "swiftui-cached-async-image" */;
 			productName = CachedAsyncImage;
+		};
+		77227CEA2C02F80600CFA045 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77E34D132C0032CE00C57C67 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+		77E34D182C00496D00C57C67 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 77E34D132C0032CE00C57C67 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
